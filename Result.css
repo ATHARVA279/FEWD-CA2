@@ -17,16 +17,15 @@
 
 .bgc-black{
     height: 80vh;
-    width: 80vw;
-    border-radius: 10px;
-    background-color:rgba(0, 0, 0, 0.7);
+    width: 82vw;
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 35px;
-    left: 170px;
+    left: 136px;
     font-size: 40px;
     font-family: "Bebas Neue";
     color: white;
-    padding: 20px 10px 0 81px;
+    padding: 30px 10px 0 255px;
 }
 
 .main{
@@ -34,21 +33,21 @@
     height: 100vh;
 }
 
-#woman2{
-    height: 320px;
+#man2{
+    height: 450px;
     position: absolute;
-    top: 325px;
+    top: 200px;
 }
 
 .buttons{
     height: 90px;
-    width: 490px;
+    width: 599px;
     position: absolute;
-    top: 510px;
-    left: 790px;
+    top: 445px;
+    left: 390px;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 172px;
 }
 
 .button{
@@ -74,6 +73,7 @@
     cursor: pointer;
     padding: 12px 14px;
 }
+
 .button-24:hover,
 .button-24:active {
   background-color: #A52F69;

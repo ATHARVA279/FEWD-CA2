@@ -50,45 +50,28 @@
     gap: 20px;
 }
 
-/* .button{
+.button{
     height: 100px;
     width: 200px;
     background-color: #48FB47;
 }
 
 .button h1{
-    font-size: 40px;
+    font-size: 50px;
     font-family: "Bebas Neue";
-} */
+}
 
-.button-24 {
+.button-24{
     background-color: #48FB47;
     border: 1px solid #48FB47;
-    border-radius: 40px;
-    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-    box-sizing: border-box;
-    color: #000000;
-    cursor: pointer;
-    display: inline-block;
-    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 16px;
-    min-height: 40px;
-    outline: 0;
-    padding: 12px 14px;
-    text-align: center;
-    text-rendering: geometricprecision;
-    text-transform: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: middle;
-    height: 70px;
-    width: 250px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 70px;
+    width: 250px;
+    cursor: pointer;
+    padding: 12px 14px;
 }
 
 .button-24:hover,

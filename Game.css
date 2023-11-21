@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Creepster&family=Nabla&family=Roboto+Slab&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    background-image: url(./Assets/Game-bg.png);
+    background-size: cover;
+}
+
+#road{
+    width: 402px;
+    height: 100vh;
+    background-image: url(./Assets/road.jpg);
+    background-size: cover;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex1{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#side1,#side2{
+    width: 100px;
+    height: 100vh;
+    background-image: url(./Assets/side-road.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box{
+    width: 134px;
+    position: relative;
+    left: 0px;
+    z-index: 999;
+    animation: box1 3s linear infinite;
+}
+
+@keyframes box1 {
+    0%{
+        top: -30vh;
+    }
+    100%{
+        top: 100vh;
+    }
+}
+
+#car{
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+}
+
+#zom1{
+    animation: z1 4s linear infinite;
+    position: relative;
+    width: 80px;
+}
+
+@keyframes z1 {
+    0%{
+        top: -50vh;
+    }
+    100%{
+        top: 100vh;
+    }
+}
+
+#zom2{
+    animation: z2 6s linear infinite;
+    position: relative;
+    width: 80px;
+}
+
+@keyframes z2 {
+    0%{
+        top: -50vh;
+    }
+    100%{
+        top: 100vh;
+    }
+}
+
+.flex-top{
+    height: 200px;
+    border: 2px solid red;
+}
+
+.Left{
+    margin: 40px 0 0 70px;
+}
+
+.Right{
+    margin: 50px 50px 0 0;
+}
+
+.kills{
+    margin-top: 20px;
+}
+
+.Left h1{
+    font-size: 60px;
+    font-family: "creepster";
+    color: white;
+}
+.Right h1{
+    font-size: 60px;
+    font-family: "creepster";
+    color: white;
+}
+
