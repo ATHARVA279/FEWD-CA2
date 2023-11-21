@@ -114,17 +114,13 @@
         left: 50%;
         transform: translateX(-50%);
         width: 90%; 
+        bottom: 35%;
     }
 
     .button,
     .button-24 {
         width: 100%;
         margin-bottom: 10px;
-    }
-
-    .button h1,
-    .button24 h1 {
-        font-size: 25px;
     }
 
     .button h1,
@@ -135,38 +131,14 @@
         display: none;
     }
 
-    .buttons {
-        align-items: center;
-        text-align: center;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%; 
-    }
-
-    .button,
-    .button-24 {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .button h1,
-    .button24 h1 {
-        font-size: 25px;
-    }
-    .bgc-black {
-        font-size: 30px;
-    }
-
-    .button h1,
-    .button24 h1 {
-        font-size: 25px;
-    }
-
     .bgc-black {
         width: 100%;
         left: 0;
         padding: 20px;
         height: 100vh;
+        font-size: 30px;
+        top: 0;
+        border-radius: 0;
     }
 
     .bgc-black p{
