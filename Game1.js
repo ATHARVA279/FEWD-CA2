@@ -31,16 +31,35 @@ window.addEventListener("keydown", function (event) {
   if (event.key === "d" || event.key === "D") {
     velocityX = 1;
   }
-  left.onclick=()=>{
-    velocityX = -1;
-  }
+});
 
-  right.onclick=()=>{
+left.onclick=()=>{
+  velocityX = -1;
+}
+
+right.onclick=()=>{
+  velocityX = 1;
+}
+
+const screenWidth = window.innerWidth;
+
+document.addEventListener("touchstart", function (event) {
+  const touchX = event.touches[0].clientX;
+
+  if (touchX < screenWidth / 2) {
+    // Left side of the screen touched
+    velocityX = -1;
+  } else {
+    // Right side of the screen touched
     velocityX = 1;
   }
-  
-
 });
+
+document.addEventListener("touchend", function () {
+  // Touch ended, stop movement
+  velocityX = 0;
+});
+
 
 window.addEventListener("keyup", function (event) {
   if (event.key === "a" || event.key === "A" || event.key === "d" || event.key === "D") {
