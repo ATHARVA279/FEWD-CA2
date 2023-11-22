@@ -1,6 +1,8 @@
 const car = document.getElementById("car");
 const zom1 = document.getElementById("zom1")
 const zom2 = document.getElementById("zom2")
+const left = document.getElementById("left-mv")
+const right = document.getElementById("right-mv")
 
 
 //Moving the car
@@ -29,6 +31,15 @@ window.addEventListener("keydown", function (event) {
   if (event.key === "d" || event.key === "D") {
     velocityX = 1;
   }
+  left.onclick=()=>{
+    velocityX = -1;
+  }
+
+  right.onclick=()=>{
+    velocityX = 1;
+  }
+  
+
 });
 
 window.addEventListener("keyup", function (event) {
