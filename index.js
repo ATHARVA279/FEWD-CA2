@@ -17,6 +17,6 @@ GitBtn.onclick=()=>{
 //adding background sound
 window.addEventListener("DOMContentLoaded",()=>{
     const audio  = document.querySelector("audio")
-    audio.volume = 0.2
+    audio.volume = 0.5
     audio.loop = true;
 })

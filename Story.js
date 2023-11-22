@@ -10,6 +10,6 @@ Play.onclick=()=>{
 
 window.addEventListener("DOMContentLoaded",()=>{
     const audio  = document.querySelector("audio")
-    audio.volume = 0.2
+    audio.volume = 0.8
     audio.loop = true;
 })

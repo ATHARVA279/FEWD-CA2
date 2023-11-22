@@ -82,7 +82,7 @@ setInterval(() => {
             const audio =  new Audio("./Assets/car collision.mp3")
             audio.currentTime = 0; 
             audio.play()
-            audio.volume = 0.04
+            audio.volume = 0.4
 
             if(life == 0){
               location.href = "./Result.html"
@@ -132,7 +132,7 @@ function makezom1(){
     zomdestroy1()
     score++
     kills.innerHTML = score
-    const audio =  new Audio("./Assets/car collision.mp3")
+    const audio =  new Audio("./Assets/Gun-shot.mp3")
     audio.currentTime = 0; 
     audio.play()
   }
@@ -148,7 +148,9 @@ function makezom2(){
     zomdestroy2()
     score++
     kills.innerHTML = score
-
+    const audio =  new Audio("./Assets/Gun-shot.mp3")
+    audio.currentTime = 0; 
+    audio.play()
   }
 }
 
@@ -161,6 +163,7 @@ timerId = setInterval(()=>{
     time--
     if(time==0){
         // window.location.href = "./Result.html"
+        localStorage.setItem("score",score)
     }
     timer.innerHTML = time
 },1000)
@@ -168,12 +171,8 @@ timerId = setInterval(()=>{
 //adding bg sound
 window.addEventListener("DOMContentLoaded",()=>{
   const audio  = document.querySelector("audio")
-  audio.volume = 0.2
+  audio.volume = 0.5
   audio.loop = true;
 })
 
-//Levels
-function levels(){
-  
-}
 

@@ -10,6 +10,7 @@
 body{
     background-image: url(./Assets/Game-bg.png);
     background-size: cover;
+    cursor: url('https://img.informer.com/icons/png/32/113/113532.png') 16 16, crosshair;
 }
 
 #road{
