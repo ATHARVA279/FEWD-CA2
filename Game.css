@@ -17,6 +17,7 @@ body{
     height: 100vh;
     background-image: url(./Assets/road.jpg);
     background-size: cover;
+    position: relative;
 }
 
 .flex{
@@ -43,7 +44,7 @@ body{
 
 #box{
     width: 134px;
-    position: relative;
+    position: absolute;
     left: 0px;
     z-index: 999;
     animation: box1 3s linear infinite;

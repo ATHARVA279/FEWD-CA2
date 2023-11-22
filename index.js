@@ -13,3 +13,10 @@ PlayBtn.onclick=()=>{
 GitBtn.onclick=()=>{
     window.location.href = "https://www.linkedin.com/in/atharva-kharade-604944287/"
 }
+
+//adding background sound
+window.addEventListener("DOMContentLoaded",()=>{
+    const audio  = document.querySelector("audio")
+    audio.volume = 0.2
+    audio.loop = true;
+})

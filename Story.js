@@ -7,3 +7,9 @@ back.onclick=()=>{
 Play.onclick=()=>{
     location.href = "./Name1.html"
 }
+
+window.addEventListener("DOMContentLoaded",()=>{
+    const audio  = document.querySelector("audio")
+    audio.volume = 0.2
+    audio.loop = true;
+})
