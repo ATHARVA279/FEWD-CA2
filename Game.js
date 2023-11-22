@@ -1,12 +1,16 @@
+const car = document.getElementById("car");
+const zom1 = document.getElementById("zom1")
+const zom2 = document.getElementById("zom2")
+
+
 //Moving the car
-var box = document.getElementById("car");
 let l = 0;
 let velocityX = 0;
 
 
 function update() {
   l += velocityX * 5; 
-  box.style.left = `${l}px`;
+  car.style.left = `${l}px`;
 }
 
 var intervalId = setInterval(update, 16);
@@ -33,12 +37,11 @@ document.getElementById("box").style.animation = "box1 3s linear infinite"
 setInterval(()=>{
     num = (Math.floor(Math.random()*3)*134)
     document.getElementById("box").style.left = `${num}px`
-    console.log(num)
  },3000)
 
- //adding lives
- const lives = document.getElementById("lives")
- let life = 10
+//adding lives
+const lives = document.getElementById("lives")
+let life = 10
 
 //Adding Collision
 let collisionDetected = false;
@@ -68,8 +71,21 @@ setInterval(() => {
             life--;
             lives.innerHTML = life;
             collisionDetected = true;
+
+          //adding collision effect
+            document.getElementById("car").classList.add("animation")
+            setTimeout(() => {
+              document.getElementById("car").classList.remove("animation")
+            }, "1000");
+
+          //adding collision sound
+            const audio =  new Audio("./Assets/car collision.mp3")
+            audio.currentTime = 0; 
+            audio.play()
+            audio.volume = 0.04
+
             if(life == 0){
-              location.href = "./Result.html "
+              location.href = "./Result.html"
             }
         }
     } else {
@@ -83,8 +99,6 @@ function zomdestroy1(){
   let zom1 = document.getElementById("zom1")
   zom1.onclick=()=>{
     zom1.style.display = "none"
-    score++
-    kills.innerhtml = score
   }
   makezom1()
 }
@@ -108,29 +122,33 @@ let score= 0;
 
 function makezom1(){
   let num = Math.ceil(Math.random()*6)
-  let duration = Math.floor(Math.random()*(4-2+1)+2)
+  let duration = Math.floor(Math.random()*(6-4+1)+4)
   let side1 = document.getElementById("side1")
   side1.innerHTML = `<img src="./Assets/zom${num}.png" id="zom1" style="animation: z1 ${duration}s linear infinite;">`
-  let zombie1 = document.getElementById("zom1")
+  
   zombie1.style.animationDuration = `${duration}`
   
   zombie1.onclick=()=>{
     zomdestroy1()
     score++
     kills.innerHTML = score
+    const audio =  new Audio("./Assets/car collision.mp3")
+    audio.currentTime = 0; 
+    audio.play()
 }
 }
 
 function makezom2(){
   let num = Math.ceil(Math.random()*6)
   let side2 = document.getElementById("side2")
-  let duration = Math.floor(Math.random()*(4-2+1)+2)
+  let duration = Math.floor(Math.random()*(6-4+1)+4)
   side2.innerHTML = `<img src="./Assets/zom${num}.png" id="zom2" style="animation: z2 ${duration}s linear infinite;">`
   let zombie2 = document.getElementById("zom2")
   zombie2.onclick=()=>{
     zomdestroy2()
     score++
     kills.innerHTML = score
+
 }
 }
 
@@ -146,4 +164,12 @@ timerId = setInterval(()=>{
     }
     timer.innerHTML = time
 },1000)
+
+//adding bg sound
+window.addEventListener("DOMContentLoaded",()=>{
+  const audio  = document.querySelector("audio")
+  audio.volume = 0.2
+  audio.loop = true;
+})
+
 

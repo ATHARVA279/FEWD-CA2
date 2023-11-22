@@ -30,8 +30,6 @@ body{
     justify-content: center;
 }
 
-
-
 #side1,#side2{
     width: 100px;
     height: 100vh;
@@ -71,6 +69,53 @@ body{
     width: 80px;
 }
 
+.animation{
+    animation: hit 1s;
+}
+
+@keyframes hit {
+    0%{
+        filter: opacity(0.5);
+    }
+
+    10%{
+        filter: opacity(0);
+    }
+
+    20%{
+        filter: opacity(0.75);
+    }
+
+    30%{
+        filter: opacity(0);
+    }
+
+    40%{
+        filter: opacity(0.5);
+    }
+
+    50%{
+        filter: opacity(0);
+    }
+
+    60%{
+        filter: opacity(0.5);
+    }
+
+    70%{
+        filter: opacity(0);
+    }
+
+    90%{
+        filter: opacity(0.5);
+    }
+
+    100%{
+        filter: opacity(0.75);
+    }
+}
+
+
 @keyframes z1 {
     0%{
         top: -50vh;
@@ -101,11 +146,12 @@ body{
 }
 
 .Left{
-    margin: 40px 0 0 70px;
+    text-align: left;
+    width: 350px;
 }
 
 .Right{
-    margin: 50px 50px 0 0;
+    width: 350px;
 }
 
 .kills{
@@ -116,12 +162,18 @@ body{
     font-size: 60px;
     font-family: "creepster";
     color: white;
+    text-align: center;
 }
 .Right h1{
     font-size: 60px;
     font-family: "creepster";
     color: white;
+    text-align: center;
 }
+
+
+
+
 
 @media only screen and (max-width: 700px){
     

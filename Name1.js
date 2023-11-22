@@ -1,6 +1,7 @@
 const InstBtn = document.getElementById("InstBtn")
 const PlayBtn = document.getElementById("PlayBtn")
 const BackBtn = document.getElementById("BackBtn")
+let gameDifficulty = document.querySelector("#difficulty")
 
 //Adding sound
 window.addEventListener("DOMContentLoaded",()=>{
@@ -32,3 +33,6 @@ PlayBtn.onclick =()=>{
 BackBtn.onclick=()=>{
     window.location.href = "./Story.html"
 }
+
+//storing difficulty in local storage
+localStorage.setItem("difficulty",gameDifficulty.value)
