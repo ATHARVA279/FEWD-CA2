@@ -8,13 +8,12 @@ let l = 0;
 let velocityX = 0;
 
 // Get the car container and its width
-const carContainer = document.getElementById("road"); // Replace with the actual ID of your container
+const carContainer = document.getElementById("road"); 
 const containerWidth = carContainer.clientWidth;
 
 function update() {
   l += velocityX * 5;
 
-  // Limit the car's position within the container boundaries
   l = Math.max(0, Math.min(l, containerWidth - car.clientWidth));
 
   car.style.left = `${l}px`;
@@ -65,10 +64,6 @@ setInterval(() => {
     var bRight = Math.abs(document.getElementById("car").getBoundingClientRect().right);
     var bTop = Math.abs(document.getElementById("car").getBoundingClientRect().top);
     var bBottom = Math.abs(document.getElementById("car").getBoundingClientRect().bottom);
-
-    if (bLeft < -5 || bRight > 402) {
-        // location.reload()
-    }
 
     if (
         b1Left < bRight &&
@@ -160,6 +155,7 @@ function makezom2(){
     const audio =  new Audio("./Assets/Gun-shot.mp3")
     audio.currentTime = 0; 
     audio.play()
+    localStorage.setItem("score",score)
   }
 }
 
@@ -171,7 +167,7 @@ timer.innerHTML = time;
 timerId = setInterval(()=>{
     time--
     if(time==0){
-        // window.location.href = "./Result.html"
+        window.location.href = "./Result.html"
         localStorage.setItem("score",score)
     }
     timer.innerHTML = time

@@ -5,13 +5,16 @@ const Score = document.getElementById("numZom")
 
 Home.onclick=()=>{
     location.href = "./index.html"
+    localStorage.clear();
 }
 
 PlayAgain.onclick=()=>{
     location.href = "./Name1.html"
+    localStorage.clear();
 }
 
-a = localStorage.getItem('Name')
+const scr = localStorage.getItem("score")
+const b = localStorage.getItem("Name")
 
-Score.innerHTML = a
-Resultname.innerHTML = 4
+Resultname.innerHTML = b
+Score.innerHTML = scr
