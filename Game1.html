@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Undead</title>
+    <link rel = "icon" href =  "./Assets/title-logo.png" type = "image/png">
+    <link rel="stylesheet" href="./Game1.css">
+</head>
+<body>
+
+    
+    
+    <section class="flex">
+        <div class="Left">
+            <div class="lives">
+                <h1>LIVES : <span id="lives">3</span></h1>
+            </div>
+            <div class="kills">
+                <h1>KILLS : <span id="kills">0</span></h1>
+            </div>
+        </div>
+
+        <div class="flex1">
+            <div id="side1">
+                <img src="./Assets/zom1.png" id="zom1">
+            </div>
+            <div id="road">
+                <img src="./Assets/Box.png" id="box">
+                <img src="./Assets/car.png" id="car">
+            </div>
+            <div id="side2">
+                <img src="./Assets/zom6.png" id="zom2">
+            </div>
+        </div>
+        <div class="Right">
+            <div class="timer">
+                <h1>TIMER : <span id="timer">30</span> sec</h1>
+            </div>
+        </div>
+    </section>
+
+
+    <audio src="./Assets/Game-bg-sound.mp3" autoplay></audio>
+</body>
+</html>
+<script src="./Game1.js"></script>

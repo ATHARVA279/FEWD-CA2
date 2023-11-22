@@ -41,7 +41,7 @@ setInterval(()=>{
 
 //adding lives
 const lives = document.getElementById("lives")
-let life = 10
+let life = 3
 
 //Adding Collision
 let collisionDetected = false;
@@ -125,7 +125,7 @@ function makezom1(){
   let duration = Math.floor(Math.random()*(6-4+1)+4)
   let side1 = document.getElementById("side1")
   side1.innerHTML = `<img src="./Assets/zom${num}.png" id="zom1" style="animation: z1 ${duration}s linear infinite;">`
-  
+  let zombie1 = document.getElementById("zom1")
   zombie1.style.animationDuration = `${duration}`
   
   zombie1.onclick=()=>{
@@ -135,7 +135,7 @@ function makezom1(){
     const audio =  new Audio("./Assets/car collision.mp3")
     audio.currentTime = 0; 
     audio.play()
-}
+  }
 }
 
 function makezom2(){
@@ -149,7 +149,7 @@ function makezom2(){
     score++
     kills.innerHTML = score
 
-}
+  }
 }
 
 //Creating a timer
@@ -172,4 +172,8 @@ window.addEventListener("DOMContentLoaded",()=>{
   audio.loop = true;
 })
 
+//Levels
+function levels(){
+  
+}
 
