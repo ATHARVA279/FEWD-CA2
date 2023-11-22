@@ -1,8 +1,8 @@
 const car = document.getElementById("car");
 const zom1 = document.getElementById("zom1")
 const zom2 = document.getElementById("zom2")
-const left = document.getElementById("left-mv")
-const right = document.getElementById("right-mv")
+const leftButton  = document.getElementById("left-mv")
+const rightButton  = document.getElementById("right-mv")
 
 
 //Moving the car
@@ -33,15 +33,36 @@ window.addEventListener("keydown", function (event) {
   }
 });
 
-left.onclick=()=>{
+// left.onclick=()=>{
+//   velocityX = -1;
+// }
+
+// right.onclick=()=>{
+//   velocityX = 1;
+// }
+
+
+window.addEventListener("keyup", function (event) {
+  if (event.key === "a" || event.key === "A" || event.key === "d" || event.key === "D") {
+    velocityX = 0;
+  }
+});
+
+
+
+leftButton.addEventListener("mousedown", function () {
   velocityX = -1;
-}
+});
 
-right.onclick=()=>{
+rightButton.addEventListener("mousedown", function () {
   velocityX = 1;
-}
+});
 
-// Mobile: Listen for touch events on the document
+// Stop movement when buttons are released
+document.addEventListener("mouseup", function () {
+  velocityX = 0;
+});
+
 document.addEventListener("touchstart", function (event) {
   const touchX = event.touches[0].clientX;
 
@@ -53,20 +74,6 @@ document.addEventListener("touchstart", function (event) {
     velocityX = 1;
   }
 });
-
-document.addEventListener("touchend", function () {
-  // Touch ended, stop movement
-  velocityX = 0;
-});
-
-
-window.addEventListener("keyup", function (event) {
-  if (event.key === "a" || event.key === "A" || event.key === "d" || event.key === "D") {
-    velocityX = 0;
-  }
-});
-
-
 
 //Adding Properties to the box
 document.getElementById("box").style.animation = "box1 3s linear infinite"
