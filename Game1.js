@@ -41,12 +41,11 @@ right.onclick=()=>{
   velocityX = 1;
 }
 
-const screenWidth = window.innerWidth;
-
+// Mobile: Listen for touch events on the document
 document.addEventListener("touchstart", function (event) {
   const touchX = event.touches[0].clientX;
 
-  if (touchX < screenWidth / 2) {
+  if (touchX < window.innerWidth / 2) {
     // Left side of the screen touched
     velocityX = -1;
   } else {
