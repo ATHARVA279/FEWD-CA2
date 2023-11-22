@@ -30,7 +30,7 @@ body{
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 40px;
+    padding: 0 40px;
     flex-wrap: wrap;
 }
 
@@ -72,7 +72,7 @@ body{
 
 @media only screen and (max-width: 600px){
     #logo1 img {
-        height: auto; 
+        height: 300px; 
     }
     .button,
     .button-24 {

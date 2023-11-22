@@ -130,7 +130,8 @@ option,select{
     .flex{
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
+        margin-top: 15%;
     }
 
     .name h1 {
@@ -146,7 +147,6 @@ option,select{
     .Choose {
         width: 150px;
         height: 175px;
-        margin-top: 80px;
     }
     
     .car-choose{
@@ -157,6 +157,7 @@ option,select{
         align-items: center;
         justify-content: center;
         margin-top: 80px;
+        gap: 20px;
     }
 
     .button h1{
