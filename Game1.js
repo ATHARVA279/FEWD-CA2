@@ -7,13 +7,21 @@ const zom2 = document.getElementById("zom2")
 let l = 0;
 let velocityX = 0;
 
+// Get the car container and its width
+const carContainer = document.getElementById("road"); // Replace with the actual ID of your container
+const containerWidth = carContainer.clientWidth;
 
 function update() {
-  l += velocityX * 5; 
+  l += velocityX * 5;
+
+  // Limit the car's position within the container boundaries
+  l = Math.max(0, Math.min(l, containerWidth - car.clientWidth));
+
   car.style.left = `${l}px`;
 }
 
 var intervalId = setInterval(update, 16);
+
 window.addEventListener("keydown", function (event) {
   if (event.key === "a" || event.key === "A") {
     velocityX = -1;
@@ -29,6 +37,7 @@ window.addEventListener("keyup", function (event) {
     velocityX = 0;
   }
 });
+
 
 
 //Adding Properties to the box
