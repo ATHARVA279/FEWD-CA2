@@ -35,7 +35,7 @@
 }
 
 #woman2 {
-    height: 320px;
+    height: 286px;
     position: absolute;
     bottom: 0;
 }
@@ -114,13 +114,14 @@
         left: 50%;
         transform: translateX(-50%);
         width: 90%; 
-        bottom: 36%;
+        top: 55vh;
     }
 
     .button,
     .button-24 {
         width: 100%;
         margin-bottom: 10px;
+        height: 45px;
     }
 
     .button h1,
