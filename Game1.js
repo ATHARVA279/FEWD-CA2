@@ -33,15 +33,6 @@ window.addEventListener("keydown", function (event) {
   }
 });
 
-// left.onclick=()=>{
-//   velocityX = -1;
-// }
-
-// right.onclick=()=>{
-//   velocityX = 1;
-// }
-
-
 window.addEventListener("keyup", function (event) {
   if (event.key === "a" || event.key === "A" || event.key === "d" || event.key === "D") {
     velocityX = 0;
@@ -63,17 +54,6 @@ document.addEventListener("mouseup", function () {
   velocityX = 0;
 });
 
-document.addEventListener("touchstart", function (event) {
-  const touchX = event.touches[0].clientX;
-
-  if (touchX < window.innerWidth / 2) {
-    // Left side of the screen touched
-    velocityX = -1;
-  } else {
-    // Right side of the screen touched
-    velocityX = 1;
-  }
-});
 
 //Adding Properties to the box
 document.getElementById("box").style.animation = "box1 3s linear infinite"
@@ -172,9 +152,6 @@ function makezom1(){
     zomdestroy1()
     score++
     kills.innerHTML = score
-    const audio =  new Audio("./Assets/Gun-shot.mp3")
-    audio.currentTime = 0; 
-    audio.play()
   }
 }
 
@@ -188,9 +165,6 @@ function makezom2(){
     zomdestroy2()
     score++
     kills.innerHTML = score
-    const audio =  new Audio("./Assets/Gun-shot.mp3")
-    audio.currentTime = 0; 
-    audio.play()
     localStorage.setItem("score",score)
   }
 }
@@ -216,4 +190,10 @@ window.addEventListener("DOMContentLoaded",()=>{
   audio.loop = true;
 })
 
+//ADDING SHOT-GUN SOUND
+window.onclick=()=>{
+  const audio =  new Audio("./Assets/Gun-shot.mp3")
+    audio.currentTime = 0; 
+    audio.play()
+}
 
