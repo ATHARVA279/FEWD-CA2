@@ -10,19 +10,26 @@
 <body>
 
     <div class="main">
-        <div id="background">
+        <div>
+            <p>WELL DONE <span id="Result-name">SOLDIER</span>!! <br>YOU WERE ABLE TO REACH THE BASE AND YOU WERE ABLE TO KILL <span id="numZom">0</span> ZOMBIES</p>
         </div>
-        <div class="bgc-black">
-            <p style="font-size: 75px;">WELL DONE <span id="Result-name">SOLDIER</span>!! <br>YOU WERE ABLE TO REACH THE BASE AND YOU WERE ABLE TO KILL <span id="numZom">0</span> ZOMBIES</p>
-        </div>
-        <div class="buttons">
-            <div class="button button-24" id="BackBtn"><h1>HOME</h1></div>
-            <div class="button button-24" id="PlayBtn"><h1>PLAY AGAIN</h1></div>
-        </div>
-        <img src="./Assets/Man1.png" id="man2">
+        
+            <div class="buttons">
+                <div class="button button-24" id="BackBtn"><h1>BACK</h1></div>
+                <div class="button button-24" id="PlayBtn"><h1>PLAY GAME</h1></div>
+            </div>
     </div>
-    
+
+    <div class="down">
+        <div class="man">
+            <img src="./Assets/Man1.png" id="man1">
+        </div>
+
+        
+    </div>
+
+    <audio src="./Assets/CantStopWaiting.ogg" autoplay loop></audio>
 
 </body>
 </html>
-<script src="./Result.js"></script>
+<script src="./Instruction.js"></script>
