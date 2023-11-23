@@ -59,8 +59,8 @@ document.addEventListener("mouseup", function () {
 document.getElementById("box").style.animation = "box1 3s linear infinite"
 
 setInterval(()=>{
-    num = (Math.floor(Math.random()*3)*134)
-    document.getElementById("box").style.left = `${num}px`
+    num = (Math.floor(Math.random()*3)*33)
+    document.getElementById("box").style.left = `${num}%`
  },3000)
 
 //adding lives
