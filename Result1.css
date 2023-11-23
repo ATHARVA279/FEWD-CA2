@@ -29,10 +29,6 @@ body{
     position: relative;
 }
 
-p{
-    font-size: 40px;
-}
-
 .down{
     height: 30%;
     width: 10%;
@@ -106,16 +102,15 @@ li{
     opacity: .5;
 }
 
+p{
+    font-size: 80px;
+}
+
 @media only screen and (max-width: 700px) {
     * {
         overflow: visible;
     }
     
-    p{
-        font-size: 22px;
-    }
-    
-
     .main{
         height: 100%;
         width: 100%;
@@ -151,7 +146,7 @@ li{
     h1{
         font-size: 20px;
     }
-
+    
     .button-24 {
         height: 40px;
     }
@@ -170,4 +165,12 @@ li{
         bottom: 0;
     }
 
+    p{
+        font-size: 52px;
+    }
+
 } 
+
+.message{
+    font-size: 70px;
+}

@@ -1,59 +1,73 @@
 const car = document.getElementById("car");
-const zom1 = document.getElementById("zom1")
-const zom2 = document.getElementById("zom2")
-const leftButton  = document.getElementById("left-mv")
-const rightButton  = document.getElementById("right-mv")
+const leftButton = document.getElementById("left-mv");
+const rightButton = document.getElementById("right-mv");
 
-
-//Moving the car
 let l = 0;
 let velocityX = 0;
+let isMoving = false;
 
-// Get the car container and its width
-const carContainer = document.getElementById("road"); 
+const carContainer = document.getElementById("road");
 const containerWidth = carContainer.clientWidth;
 
 function update() {
   l += velocityX * 5;
-
   l = Math.max(0, Math.min(l, containerWidth - car.clientWidth));
-
   car.style.left = `${l}px`;
+
+  if (isMoving) {
+    requestAnimationFrame(update);
+  }
 }
 
-var intervalId = setInterval(update, 16);
+function startMoving(direction) {
+  if (direction === "left") {
+    velocityX = -1;
+  } else if (direction === "right") {
+    velocityX = 1;
+  }
+
+  if (!isMoving) {
+    isMoving = true;
+    update();
+  }
+}
+
+function stopMoving() {
+  velocityX = 0;
+  isMoving = false;
+}
+
+leftButton.addEventListener("touchstart", function () {
+  startMoving("left");
+});
+
+rightButton.addEventListener("touchstart", function () {
+  startMoving("right");
+});
+
+document.addEventListener("mouseup", stopMoving);
 
 window.addEventListener("keydown", function (event) {
   if (event.key === "a" || event.key === "A") {
-    velocityX = -1;
-  }
-
-  if (event.key === "d" || event.key === "D") {
-    velocityX = 1;
+    startMoving("left");
+  } else if (event.key === "d" || event.key === "D") {
+    startMoving("right");
   }
 });
 
 window.addEventListener("keyup", function (event) {
   if (event.key === "a" || event.key === "A" || event.key === "d" || event.key === "D") {
-    velocityX = 0;
+    stopMoving();
   }
 });
 
+// Optional: Stop movement if the mouse leaves the button
+leftButton.addEventListener("mouseleave", stopMoving);
+rightButton.addEventListener("mouseleave", stopMoving);
 
-
-leftButton.addEventListener("mousedown", function () {
-  velocityX = -1;
-});
-
-rightButton.addEventListener("mousedown", function () {
-  velocityX = 1;
-});
-
-// Stop movement when buttons are released
-document.addEventListener("mouseup", function () {
-  velocityX = 0;
-});
-
+// Optional: Stop movement if the touch ends
+leftButton.addEventListener("touchend", stopMoving);
+rightButton.addEventListener("touchend", stopMoving);
 
 //Adding Properties to the box
 document.getElementById("box").style.animation = "box1 3s linear infinite"
@@ -105,7 +119,8 @@ setInterval(() => {
             audio.volume = 0.4
 
             if(life == 0){
-              location.href = "./Result.html"
+              location.href = "./Result1.html"
+              localStorage.setItem("score",score)
             }
         }
     } else {

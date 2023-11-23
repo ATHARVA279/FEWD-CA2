@@ -31,7 +31,7 @@ body{
 
 .down{
     height: 30%;
-    width: 100%;
+    width: 10%;
     position: absolute;
     bottom: 0;
     display: flex;

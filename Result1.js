@@ -19,29 +19,11 @@ const b = localStorage.getItem("Name")
 Resultname.innerHTML = b
 Score.innerHTML = scr
 
-var first= [
-    "Congratulations,",
-    "Well done,",
-    "",
-    "Victory is yours,",
-    "Hats off,"
-]
-
-var second = [
-    "! You annihilated ",
-    "! You killed :",
-    "you're a zombie-slaying hero! You have killed : ",
-    "! You've exterminated "
-
-]
-
-
-
 const view= document.getElementById("message")
 
-var random = first[Math.floor(Math.random()*first.length)]
-var random1 = second[Math.floor(Math.random()*second.length)]
-
-view.innerHTML = random + " " + b + " " + random1 + scr + " zombies"
-
-
+if(scr>0){
+    view.innerHTML = "You were killed" + " " + b + " " + "but your death did not go to waste you were able to kill" + scr + " zombies"
+}
+else{
+    view.innerHTML = b + " You were killed"
+}
