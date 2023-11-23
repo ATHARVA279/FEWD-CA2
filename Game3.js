@@ -70,12 +70,12 @@ leftButton.addEventListener("touchend", stopMoving);
 rightButton.addEventListener("touchend", stopMoving);
 
 //Adding Properties to the box
-document.getElementById("box").style.animation = "box1 3s linear infinite"
+document.getElementById("box").style.animation = "box1 2s linear infinite"
 
 setInterval(()=>{
     num = (Math.floor(Math.random()*3)*33)
     document.getElementById("box").style.left = `${num}%`
- },3000)
+ },2000)
 
 //adding lives
 const lives = document.getElementById("lives")
@@ -157,7 +157,7 @@ let score= 0;
 
 function makezom1(){
   let num = Math.ceil(Math.random()*6)
-  let duration = Math.floor(Math.random()*(6-4+1)+4)
+  let duration = Math.floor(Math.random()*(4-3+1)+3)
   let side1 = document.getElementById("side1")
   side1.innerHTML = `<img src="./Assets/zom${num}.png" id="zom1" style="animation: z1 ${duration}s linear infinite;">`
   let zombie1 = document.getElementById("zom1")
@@ -173,7 +173,7 @@ function makezom1(){
 function makezom2(){
   let num = Math.ceil(Math.random()*6)
   let side2 = document.getElementById("side2")
-  let duration = Math.floor(Math.random()*(6-4+1)+4)
+  let duration = Math.floor(Math.random()*(4-3+1)+3)
   side2.innerHTML = `<img src="./Assets/zom${num}.png" id="zom2" style="animation: z2 ${duration}s linear infinite;">`
   let zombie2 = document.getElementById("zom2")
   zombie2.onclick=()=>{
