@@ -3,11 +3,11 @@ const PlayBtn = document.getElementById("PlayBtn")
 const GitBtn = document.getElementById("GitBtn")
 
 InstBtn.onclick=()=>{
-    window.location.href = "./HTML/Instruction.html"
+    window.location.href = "./Instruction.html"
 }
 
 PlayBtn.onclick=()=>{
-    window.location.href = "./HTML/Story.html"
+    window.location.href = "./Story.html"
 }
 
 GitBtn.onclick=()=>{

@@ -8,7 +8,7 @@
 }
 
 body{
-    background-image: url(../Assets/Game-bg.png);
+    background-image: url(./Assets/Game-bg.png);
     background-size: cover;
     cursor: url('https://img.informer.com/icons/png/32/113/113532.png') 16 16, crosshair;
 }
@@ -16,7 +16,7 @@ body{
 #road{
     width: 402px;
     height: 100vh;
-    background-image: url(../Assets/road.jpg);
+    background-image: url(./Assets/road.jpg);
     background-size: cover;
     position: relative;
 }
@@ -34,7 +34,7 @@ body{
 #side1,#side2{
     width: 100px;
     height: 100vh;
-    background-image: url(../Assets/side-road.png);
+    background-image: url(./Assets/side-road.png);
     background-size: cover;
     display: flex;
     justify-content: center;
