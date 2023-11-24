@@ -196,11 +196,11 @@ timerId = setInterval(() => {
 }, 1000)
 
 // Adding bg sound
-window.addEventListener("DOMContentLoaded", () => {
+
   const audio = document.querySelector("audio")
   audio.volume = 0.5
   audio.loop = true
-})
+
 
 // Adding SHOT-GUN SOUND
 window.onclick = () => {

@@ -4,11 +4,11 @@ const PlayBtn = document.getElementById("PlayBtn")
 const BackBtn = document.getElementById("BackBtn")
 
 // Adding sound
-window.addEventListener("DOMContentLoaded", () => {
+
     const audio = document.querySelector("audio")
     audio.volume = 0.2
     audio.loop = true
-})
+
 
 // Adding functions to buttons
 InstBtn.onclick = () => {
