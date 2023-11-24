@@ -116,7 +116,7 @@ setInterval(() => {
       const audio = new Audio("./Assets/car collision.mp3")
       audio.currentTime = 0
       audio.play()
-      audio.volume = 0.4
+      audio.volume = 0.6
 
       if (life == 0) {
         location.href = "./Result1.html"
@@ -150,12 +150,12 @@ zomdestroy2()
 // Score
 const kills = document.getElementById("kills")
 let score = 0
-const side1 = document.getElementById("side1")
+
 // Making zombies
 function makezom1() {
   let num = Math.ceil(Math.random() * 6)
   let duration = Math.floor(Math.random() * (6 - 4 + 1) + 4)
-
+  let side1 = document.getElementById("side1")
   side1.innerHTML = `<img src="./Assets/zom${num}.png" id="zom1" style="animation: z1 ${duration}s linear infinite;">`
   let zombie1 = document.getElementById("zom1")
   zombie1.style.animationDuration = `${duration}`
@@ -166,10 +166,10 @@ function makezom1() {
     kills.innerHTML = score
   }
 }
-const side2 = document.getElementById("side2")
+
 function makezom2() {
   let num = Math.ceil(Math.random() * 6)
-  
+  let side2 = document.getElementById("side2")
   let duration = Math.floor(Math.random() * (6 - 4 + 1) + 4)
   side2.innerHTML = `<img src="./Assets/zom${num}.png" id="zom2" style="animation: z2 ${duration}s linear infinite;">`
   let zombie2 = document.getElementById("zom2")
@@ -196,27 +196,15 @@ timerId = setInterval(() => {
 }, 1000)
 
 // Adding bg sound
-
+window.addEventListener("DOMContentLoaded", () => {
   const audio = document.querySelector("audio")
   audio.volume = 0.5
   audio.loop = true
-
+})
 
 // Adding SHOT-GUN SOUND
-carContainer.onclick = () => {
+window.onclick = () => {
   const audio = new Audio("./Assets/Gun-shot.mp3")
   audio.currentTime = 0
   audio.play()
 }
-side1.onclick = () => {
-  const audio = new Audio("./Assets/Gun-shot.mp3")
-  audio.currentTime = 0
-  audio.play()
-}
-side2.onclick = () => {
-  const audio = new Audio("./Assets/Gun-shot.mp3")
-  audio.currentTime = 0
-  audio.play()
-}
-
-
