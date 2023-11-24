@@ -113,13 +113,13 @@ setInterval(() => {
             }, "1000");
 
           //adding collision sound
-            const audio =  new Audio("./Assets/car collision.mp3")
+            const audio =  new Audio("../Assets/car collision.mp3")
             audio.currentTime = 0; 
             audio.play()
             audio.volume = 0.4
 
             if(life == 0){
-              location.href = "./Result1.html"
+              location.href = "../HTML/Result1.html"
               localStorage.setItem("score",score)
             }
         }
@@ -159,7 +159,7 @@ function makezom1(){
   let num = Math.ceil(Math.random()*6)
   let duration = Math.floor(Math.random()*(6-4+1)+4)
   let side1 = document.getElementById("side1")
-  side1.innerHTML = `<img src="./Assets/zom${num}.png" id="zom1" style="animation: z1 ${duration}s linear infinite;">`
+  side1.innerHTML = `<img src="../Assets/zom${num}.png" id="zom1" style="animation: z1 ${duration}s linear infinite;">`
   let zombie1 = document.getElementById("zom1")
   zombie1.style.animationDuration = `${duration}`
   
@@ -174,7 +174,7 @@ function makezom2(){
   let num = Math.ceil(Math.random()*6)
   let side2 = document.getElementById("side2")
   let duration = Math.floor(Math.random()*(6-4+1)+4)
-  side2.innerHTML = `<img src="./Assets/zom${num}.png" id="zom2" style="animation: z2 ${duration}s linear infinite;">`
+  side2.innerHTML = `<img src="../Assets/zom${num}.png" id="zom2" style="animation: z2 ${duration}s linear infinite;">`
   let zombie2 = document.getElementById("zom2")
   zombie2.onclick=()=>{
     zomdestroy2()
@@ -192,7 +192,7 @@ timer.innerHTML = time;
 timerId = setInterval(()=>{
     time--
     if(time==0){
-        window.location.href = "./Result.html"
+        window.location.href = "../HTML/Result.html"
         localStorage.setItem("score",score)
     }
     timer.innerHTML = time
@@ -207,7 +207,7 @@ window.addEventListener("DOMContentLoaded",()=>{
 
 //ADDING SHOT-GUN SOUND
 window.onclick=()=>{
-  const audio =  new Audio("./Assets/Gun-shot.mp3")
+  const audio =  new Audio("../Assets/Gun-shot.mp3")
     audio.currentTime = 0; 
     audio.play()
 }

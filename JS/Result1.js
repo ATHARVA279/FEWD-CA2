@@ -4,12 +4,12 @@ const Resultname = document.getElementById("Result-name")
 const Score = document.getElementById("numZom")
 
 Home.onclick=()=>{
-    location.href = "./index.html"
+    location.href = "../index.html"
     localStorage.clear();
 }
 
 PlayAgain.onclick=()=>{
-    location.href = "./Name1.html"
+    location.href = "../HTML/Name1.html"
     localStorage.clear();
 }
 

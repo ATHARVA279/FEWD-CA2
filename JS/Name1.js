@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
 // Adding functions to buttons
 InstBtn.onclick = () => {
     // Redirect to instruction page
-    window.location.href = "./Instruction.html";
+    window.location.href = "../HTML/Instruction.html";
 };
 
 PlayBtn.onclick = () => {
@@ -33,11 +33,11 @@ PlayBtn.onclick = () => {
         // Redirect based on selected difficulty
         if (selectedDifficulty) {
             if (selectedDifficulty === "easy") {
-                location.href = "./Game1.html";
+                location.href = "../HTML/Game1.html";
             } else if (selectedDifficulty === "medium") {
-                location.href = "./Game2.html";
+                location.href = "../HTML/Game2.html";
             } else if (selectedDifficulty === "difficult") {
-                location.href = "./Game3.html";
+                location.href = "../HTML/Game3.html";
             }
         }
     }
@@ -45,5 +45,5 @@ PlayBtn.onclick = () => {
 
 BackBtn.onclick = () => {
     // Redirect to the story page
-    window.location.href = "./Story.html";
+    window.location.href = "../HTML/Story.html";
 };
