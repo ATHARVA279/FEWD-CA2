@@ -11,6 +11,7 @@ body{
     background-size: cover;
 }
 
+/* Button Styles */
 .button h1{
     font-size: 60px;
     font-family: "Creepster";
@@ -40,6 +41,7 @@ body{
   opacity: 0.5;
 }
 
+/* Instruction Button Styles */
 #InstBtn{
     position: absolute;
     height: 40px;
@@ -60,6 +62,7 @@ body{
     height: 100vh;
 }
 
+/* Choose Section Styles */
 .Choose{
     width: 350px;
     height: 500px;
@@ -69,6 +72,7 @@ body{
     justify-content: space-around;
 }
 
+/* Car Choose Section Styles */
 .car-choose{
     width: 350px;
     height: 500px;
@@ -87,6 +91,7 @@ body{
     font-family: "creepster";
 }
 
+/* Input div Styles */
 .input{
     height: 60px;
     width: 350px;

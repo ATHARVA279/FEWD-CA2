@@ -16,6 +16,7 @@ body{
     display: grid;
 }
 
+/* Div behind the instruction */
 .main{
     height: 90%;
     width: 80%;
@@ -29,6 +30,7 @@ body{
     position: relative;
 }
 
+/* Div for the the of the man */
 .down{
     height: 30%;
     width: 10%;
@@ -39,6 +41,7 @@ body{
     overflow: visible;
 }
 
+/* Styling the image if the man */
 .man{
     width: 100px;
     overflow: visible;
@@ -54,6 +57,7 @@ li{
     font-size: 40px;
 }
 
+/* Styling the buttons */
 .buttons {
     width: 350px;
     display: flex;

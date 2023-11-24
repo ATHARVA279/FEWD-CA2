@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 body{
@@ -16,6 +15,7 @@ body{
     display: grid;
 }
 
+/* Div behind the result */
 .main{
     height: 90%;
     width: 80%;

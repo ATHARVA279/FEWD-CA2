@@ -1,15 +1,17 @@
 const back = document.getElementById("BackBtn")
-const Play = document.getElementById("PlayBtn")
+const play = document.getElementById("PlayBtn")
 
 back.onclick=()=>{
     location.href = "./index.html"
 }
-Play.onclick=()=>{
+
+play.onclick=()=>{
     location.href = "./Name1.html"
 }
 
+//getting the sound
 window.addEventListener("DOMContentLoaded",()=>{
     const audio  = document.querySelector("audio")
     audio.volume = 0.8
-    audio.loop = true;
+    audio.loop = true
 })

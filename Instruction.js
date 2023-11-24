@@ -8,6 +8,7 @@ Play.onclick=()=>{
     location.href = "./Story.html"
 }
 
+//making the audio play
 window.addEventListener("DOMContentLoaded",()=>{
     const audio  = document.querySelector("audio")
     audio.volume = 0.2
