@@ -152,10 +152,11 @@ const kills = document.getElementById("kills");
 let score = 0;
 
 // Making zombies
+const side1 = document.getElementById("side1");
 function makezom1() {
   let num = Math.ceil(Math.random() * 6);
   let duration = Math.floor(Math.random() * (4 - 3 + 1) + 3);
-  let side1 = document.getElementById("side1");
+
   side1.innerHTML = `<img src="./Assets/zom${num}.png" id="zom1" style="animation: z1 ${duration}s linear infinite;">`;
   let zombie1 = document.getElementById("zom1");
   zombie1.style.animationDuration = `${duration}`;
@@ -166,10 +167,10 @@ function makezom1() {
     kills.innerHTML = score;
   };
 }
-
+const side2 = document.getElementById("side2");
 function makezom2() {
   let num = Math.ceil(Math.random() * 6);
-  let side2 = document.getElementById("side2");
+
   let duration = Math.floor(Math.random() * (4 - 3 + 1) + 3);
   side2.innerHTML = `<img src="./Assets/zom${num}.png" id="zom2" style="animation: z2 ${duration}s linear infinite;">`;
   let zombie2 = document.getElementById("zom2");
@@ -203,8 +204,19 @@ timerId = setInterval(() => {
 
 
 // Adding SHOT-GUN SOUND
-window.onclick = () => {
-  const audio = new Audio("./Assets/Gun-shot.mp3");
-  audio.currentTime = 0;
-  audio.play();
-};
+carContainer.onclick = () => {
+  const audio = new Audio("./Assets/Gun-shot.mp3")
+  audio.currentTime = 0
+  audio.play()
+}
+side1.onclick = () => {
+  const audio = new Audio("./Assets/Gun-shot.mp3")
+  audio.currentTime = 0
+  audio.play()
+}
+side2.onclick = () => {
+  const audio = new Audio("./Assets/Gun-shot.mp3")
+  audio.currentTime = 0
+  audio.play()
+}
+
