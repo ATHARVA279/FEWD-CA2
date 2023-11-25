@@ -1,7 +1,9 @@
+//declaring the variables
 const car = document.getElementById("car")
 const leftButton = document.getElementById("left-mv")
 const rightButton = document.getElementById("right-mv")
 
+//movement of the car
 let l = 0
 let velocityX = 0
 let isMoving = false
@@ -11,7 +13,7 @@ const containerWidth = carContainer.clientWidth
 
 function update() {
   l += velocityX * 5
-  l = Math.max(0, Math.min(l, containerWidth - car.clientWidth))
+  l = Math.max(0, Math.min(l, containerWidth-car.clientWidth))
   car.style.left = `${l}px`
 
   if (isMoving) {
@@ -61,11 +63,9 @@ window.addEventListener("keyup", function (event) {
   }
 })
 
-// Optional: Stop movement if the mouse leaves the button
 leftButton.addEventListener("mouseleave", stopMoving)
 rightButton.addEventListener("mouseleave", stopMoving)
 
-// Optional: Stop movement if the touch ends
 leftButton.addEventListener("touchend", stopMoving)
 rightButton.addEventListener("touchend", stopMoving)
 
@@ -73,7 +73,7 @@ rightButton.addEventListener("touchend", stopMoving)
 document.getElementById("box").style.animation = "box1 3s linear infinite"
 
 setInterval(() => {
-  num = Math.floor(Math.random() * 3) * 33
+  num = (Math.floor(Math.random() * 3) * 33)
   document.getElementById("box").style.left = `${num}%`
 }, 3000)
 
@@ -183,10 +183,9 @@ function makezom2() {
 
 // Creating a timer
 const timer = document.getElementById("timer")
-var timerId
 var time = 30
 timer.innerHTML = time
-timerId = setInterval(() => {
+setInterval(() => {
   time--
   if (time == 0) {
     window.location.href = "./Result.html"

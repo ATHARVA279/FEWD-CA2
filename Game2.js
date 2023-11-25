@@ -183,10 +183,9 @@ function makezom2() {
 
 // Creating a timer
 const timer = document.getElementById("timer")
-var timerId
 var time = 30
 timer.innerHTML = time
-timerId = setInterval(() => {
+setInterval(() => {
   time--
   if (time == 0) {
     window.location.href = "./Result.html"
