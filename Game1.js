@@ -52,7 +52,6 @@ rightButton.addEventListener("touchstart", function () {
   startMoving("right")
 })
 
-document.addEventListener("mouseup", stopMoving)
 
 window.addEventListener("keydown", function (event) {
   if (event.key === "a" || event.key === "A") {
@@ -67,9 +66,6 @@ window.addEventListener("keyup", function (event) {
     stopMoving()
   }
 })
-
-leftButton.addEventListener("mouseleave", stopMoving)
-rightButton.addEventListener("mouseleave", stopMoving)
 
 leftButton.addEventListener("touchend", stopMoving)
 rightButton.addEventListener("touchend", stopMoving)
