@@ -67,6 +67,9 @@ window.addEventListener("keyup", function (event) {
   }
 })
 
+leftButton.addEventListener("mouseleave", stopMoving)
+rightButton.addEventListener("mouseleave", stopMoving)
+
 leftButton.addEventListener("touchend", stopMoving)
 rightButton.addEventListener("touchend", stopMoving)
 
