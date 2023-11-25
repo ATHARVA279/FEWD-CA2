@@ -1,4 +1,5 @@
 const car = document.getElementById("car");
+const box = document.getElementById("box")
 const leftButton = document.getElementById("left-mv");
 const rightButton = document.getElementById("right-mv");
 
@@ -74,7 +75,7 @@ document.getElementById("box").style.animation = "box1 2s linear infinite";
 
 setInterval(() => {
   num = (Math.floor(Math.random() * 3) * 33);
-  document.getElementById("box").style.left = `${num}%`;
+  box.style.left = `${num}%`;
 }, 2000);
 
 // Adding lives
@@ -85,15 +86,15 @@ let life = 3;
 let collisionDetected = false;
 
 setInterval(() => {
-  var b1Left = Math.abs(document.getElementById("box").getBoundingClientRect().left);
-  var b1Right = Math.abs(document.getElementById("box").getBoundingClientRect().right);
-  var b1Top = Math.abs(document.getElementById("box").getBoundingClientRect().top);
-  var b1Bottom = Math.abs(document.getElementById("box").getBoundingClientRect().bottom);
+  var b1Left = Math.abs(box.getBoundingClientRect().left)
+  var b1Right = Math.abs(box.getBoundingClientRect().right)
+  var b1Top = Math.abs(box.getBoundingClientRect().top)
+  var b1Bottom = Math.abs(box.getBoundingClientRect().bottom)
 
-  var bLeft = Math.abs(document.getElementById("car").getBoundingClientRect().left);
-  var bRight = Math.abs(document.getElementById("car").getBoundingClientRect().right);
-  var bTop = Math.abs(document.getElementById("car").getBoundingClientRect().top);
-  var bBottom = Math.abs(document.getElementById("car").getBoundingClientRect().bottom);
+  var bLeft = Math.abs(car.getBoundingClientRect().left)
+  var bRight = Math.abs(car.getBoundingClientRect().right)
+  var bTop = Math.abs(car.getBoundingClientRect().top)
+  var bBottom = Math.abs(car.getBoundingClientRect().bottom)
 
   if (
     b1Left < bRight &&
@@ -107,10 +108,10 @@ setInterval(() => {
       collisionDetected = true;
 
       // Adding collision effect
-      document.getElementById("car").classList.add("animation");
+      car.classList.add("animation")
       setTimeout(() => {
-        document.getElementById("car").classList.remove("animation");
-      }, 1000);
+        car.classList.remove("animation")
+      }, "1000")
 
       // Adding collision sound
       const audio = new Audio("./Assets/car collision.mp3");

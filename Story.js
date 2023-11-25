@@ -11,7 +11,7 @@ play.onclick=()=>{
 
 //getting the sound
 
-    const audio  = document.querySelector("audio")
-    audio.volume = 0.8
-    audio.loop = true
+const audio  = document.querySelector("audio")
+audio.volume = 0.8
+audio.loop = true
 

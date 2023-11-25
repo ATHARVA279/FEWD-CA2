@@ -16,9 +16,6 @@ PlayAgain.onclick = () => {
 const scr = localStorage.getItem("score");
 const b = localStorage.getItem("Name");
 
-Resultname.innerHTML = b;
-Score.innerHTML = scr;
-
 const view = document.getElementById("message");
 
 

@@ -17,10 +17,6 @@ PlayAgain.onclick = () => {
 const scr = localStorage.getItem("score");
 const b = localStorage.getItem("Name");
 
-Resultname.innerHTML = b;
-Score.innerHTML = scr;
-
-
 //different statements for winning the game
 var first = [
     "Congratulations,",
